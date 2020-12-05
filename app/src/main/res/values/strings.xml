@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">MedxInfo-ICE</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="getstarted">GET STARTED</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Medical Information</string>
+    <string name="slide_1_desc">MedixInfo:ICE is an emergency services app. Containing your medical history for use in case of emergency.</string>
+
+    <string name="slide_2_title">Emergency Contacts</string>
+    <string name="slide_2_desc">Register emergency contacts which can be referenced or sent a message in the event of an emergency.</string>
+
+    <string name="slide_3_title">Conditions, Allergies &amp; More</string>
+    <string name="slide_3_desc">Detail your conditions, allergies, medications &amp; more.</string>
+
+    <string name="slide_4_title">Keep your information current</string>
+    <string name="slide_4_desc">Detail your medical history &amp; store private information for those close to you.</string>
+
+    <string name="btn_continue">Continue</string>
+    <string name="add_medications">Press the + button to add a medication.</string>
+    <string name="add_contacts">Press the + button to add an emergency contact.</string>
+    <string name="add_conditions">Press the + button to add a condition.</string>
+    <string name="add_allergies">Press the + button to add a allergy.</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="extra_details">Extra Details</string>
+    <string name="contact">Contact</string>
+    <string name="doctor_general_practitioner">Doctor / General Practitioner</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="text_settings">Change system settings.</string>
+    <string name="title_settings">Settings</string>
+    <string name="message_emergency_contacts">Send Emergency Contacts</string>
+    <string name="find_a_hospital">Find A Hospital</string>
+    <string name="unkown_name">J. Doe</string>
+    <string name="unknown_date_of_birth">\??/??/????</string>
+    <string name="unknown_height">0\'0 ft/cm</string>
+    <string name="unkown_weight">0 lb/kg</string>
+    <string name="unknown_blood_group">\??</string>
+    <string name="title_privacy">Privacy</string>
+    <string name="text_privacy">View our privacy policy and options.</string>
+    <string name="bottom_navigation_conditions">Conditions</string>
+    <string name="bottom_navigation_medications">Medications</string>
+    <string name="bottom_navigation_allergies">Allergies</string>
+    <string name="bottom_navigation_contacts">Contacts</string>
+    <string name="full_name">Full Name</string>
+    <string name="height">Height</string>
+    <string name="height_metric">ft</string>
+    <string name="weight">Weight</string>
+    <string name="weight_metric">lb</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="organ_donor_status">Organ Donor Status</string>
+    <string name="address">Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="new_emergency_contacts">New Emergency Contact</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="relation">Relation</string>
+    <string name="relation_helper">E.g. Father</string>
+    <string name="work_phone_number">Work Phone Number</string>
+    <string name="cell_phone_number">Cell Phone Number</string>
+    <string name="title_personal">Personal</string>
+    <string name="text_personal">Edit your personal information.</string>
+    <string name="your_medicard_information">Your MediCard Information</string>
+    <string name="signal_emergency">Notify Contacts</string>
+    <string name="find_hospital">Find Hospital</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="no_conditions">No known conditions.</string>
+    <string name="no_medications">No known medications.</string>
+    <string name="no_allergies">No known allergies.</string>
+    <string name="checkmark">✓</string>
+    <string name="cross">✗</string>
+    <string name="emergency_contacts">Emergency Contacts</string>
+    <string name="medications">Medications</string>
+    <string name="new_medication">New Medication</string>
+    <string name="title">Title</string>
+    <string name="dosage">Dosage</string>
+    <string name="description">Description</string>
+    <string name="medications_description">Instructions, Usage, etc</string>
+    <string name="settings">Settings</string>
+    <string name="text">text</string>
+    <string name="associated_symptoms">Associated Symptoms</string>
+    <string name="medicine">Medicine(s)</string>
+    <string name="doctor_specialst">Doctor / Specialist</string>
+    <string name="new_condition">New Condition</string>
+    <string name="name">Name</string>
+    <string name="symptoms">Symptoms</string>
+    <string name="symptom_examples">Weakness, fatigue, confusion, nausea etc...</string>
+    <string name="medications_example">Humalog, Lantis etc...</string>
+    <string name="doctor_example">Dr. John Doe</string>
+    <string name="new_allergy">New Allergy</string>
+    <string name="treatment">Treatment Instructions</string>
+    <string name="treatment_instructions">Treatment Instructions</string>
+    <string name="allergies">Allergies</string>
+    <string name="notifying_contacts">Notifying Contacts</string>
+</resources>

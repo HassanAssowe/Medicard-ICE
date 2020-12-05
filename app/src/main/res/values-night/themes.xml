@@ -1,0 +1,159 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MedxInfoICE" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#BB0044</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#1E3E72</item>
+        <!-- Secondary brand color. -->
+        <item name="colorAccent">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimarySurface</item>
+        <!-- Status bar color. -->
+        <item name="android:navigationBarColor" tools:targetApi="l">?attr/colorPrimarySurface</item>
+        <!-- color background color. -->
+        <item name="android:windowBackground">?attr/colorPrimaryDark</item>
+    </style>
+
+    <!-- Screens background color-->
+
+    <color name="bg_screen1">#ea0055</color>
+    <color name="bg_screen2">#f6bc5b</color>
+    <color name="bg_screen3">#3ab4e7</color>
+    <color name="bg_screen4">#ad87c0</color>
+
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#BB0044</color>
+    <color name="dot_dark_screen2">#C49748</color>
+    <color name="dot_dark_screen3">#2E8FB8</color>
+    <color name="dot_dark_screen4">#8A6C99</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#EE3377</color>
+    <color name="dot_light_screen2">#F7CA7B</color>
+    <color name="dot_light_screen3">#61C2EB</color>
+    <color name="dot_light_screen4">#BD9FCC</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+    </array>
+
+    <style name="appBar">
+        <item name="android:background">?attr/colorPrimarySurface</item>
+    </style>
+
+    <style name="AlertDialogTheme.Center" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="materialAlertDialogTitlePanelStyle">@style/TitlePaneStyleCenter</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/TitleTextStyleCenter</item>
+        <item name="materialAlertDialogTitleIconStyle">@style/TitleIconStyleCenter</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/BodyTextStyleCenter</item>
+        <item name="buttonBarStyle">@style/ButtonBarStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+    </style>
+
+    <style name="TitlePaneStyleCenter" parent="MaterialAlertDialog.MaterialComponents.Title.Panel.CenterStacked">
+        <item name="android:padding">16dp</item>
+        <item name="android:background">?android:colorBackground</item>
+    </style>
+
+    <style name="TitleIconStyleCenter" parent="MaterialAlertDialog.MaterialComponents.Title.Icon.CenterStacked">
+        <item name="android:tint">@color/colorPrimary</item>
+    </style>
+
+    <style name="TitleTextStyleCenter" parent="MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BodyTextStyleCenter" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">?android:textAppearanceListItemSecondary</item>
+    </style>
+
+    <style name="ButtonBarStyle">
+        <!--<item name="android:background">?android:colorBackground</item> -->
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog"></style>
+
+    <style name="personalInformation">
+        <item name="android:backgroundTint">?attr/colorSurface</item>
+    </style>
+
+    <style name="MaterialCard">
+        <item name="android:background">?attr/colorSurface</item>
+    </style>
+
+    <style name="TextInputLayout">
+        <item name="android:backgroundTint">?attr/colorPrimarySurface</item>
+    </style>
+
+    <style name="TextInputLayoutText">
+
+    </style>
+
+    <style name="BottomNavigation">
+        <item name="itemBackground">?attr/colorSurface</item>
+        <item name="itemIconTint">@drawable/bottom_nav_selector_dark</item>
+        <item name="itemTextColor">@drawable/bottom_nav_selector_dark</item>
+    </style>
+
+    <style name="cardViewTitle" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="cardViewSubTitle" parent="TextAppearance.AppCompat.Subhead">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="textColorTitle" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="textColorTitle2" parent="TextAppearance.AppCompat.Subhead">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="textColorBody">
+        <item name="android:textColor">@color/white</item>
+        <item name="drawableTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="imageColor">
+        <item name="android:tint">@color/colorPrimary</item>
+    </style>
+
+    <style name="button">
+        <item name="android:backgroundTint">?attr/colorSurface</item>
+        <item name="android:textColor">?attr/colorControlNormal</item>
+        <item name="drawableTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="floatingActionButton">
+        <item name="android:backgroundTint">?attr/colorPrimary</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="fabSize">normal</item>
+        <item name="android:src">@drawable/ic_add</item>
+        <item name="tint">?attr/colorControlNormal</item>
+    </style>
+
+</resources>

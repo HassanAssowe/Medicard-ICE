@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PersonalInformationFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:menu="@menu/personal_information_top_app_bar"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="@string/personal_information" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Note: A RecyclerView can also be used -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- Scrollable content -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/required_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_bg"
+                style="@style/personalInformation"
+                android:paddingTop="8dp"
+                android:paddingBottom="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/profile_picture"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_profile_picture"
+                    app:layout_constraintDimensionRatio="H,1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.25" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/full_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                    android:backgroundTint="@color/white"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="@string/full_name"
+                    app:endIconMode="clear_text"
+                    app:helperTextEnabled="true"
+                    app:layout_constraintStart_toStartOf="@id/date_of_birth"
+                    app:layout_constraintTop_toBottomOf="@id/profile_picture"
+                    app:layout_constraintWidth_percent="0.6"
+                    app:startIconDrawable="@drawable/ic_person"
+                    app:startIconTint="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/TextInputLayout"
+                        android:inputType="text"
+                        android:maxLength="26"
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:nextFocusRight="@id/sex_dropdown" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/sex_dropdown"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintEnd_toEndOf="@id/date_of_birth"
+                    app:layout_constraintTop_toBottomOf="@id/profile_picture"
+                    app:layout_constraintWidth_percent="0.28"
+                    app:startIconDrawable="@drawable/ic_sex"
+                    app:startIconTint="@color/white">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/filled_exposed_dropdown_sex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextInputLayout"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/date_of_birth"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/date_of_birth"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/full_name"
+                    app:layout_constraintWidth_percent="0.9"
+                    app:startIconDrawable="@drawable/ic_calendar"
+                    app:startIconTint="@color/white">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/filled_exposed_dropdown_dob"
+                        style="@style/TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:nextFocusForward="@id/height"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/height"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/height"
+                    app:endIconMode="clear_text"
+                    app:helperTextEnabled="true"
+                    app:layout_constraintStart_toStartOf="@id/full_name"
+                    app:layout_constraintTop_toBottomOf="@id/date_of_birth"
+                    app:layout_constraintWidth_percent="0.60"
+                    app:startIconDrawable="@drawable/ic_height"
+                    app:startIconTint="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/TextInputLayout"
+                        android:inputType="text"
+                        android:maxLength="26"
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:nextFocusRight="@+id/height_dropdown" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/height_dropdown"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/height_metric"
+                    app:layout_constraintEnd_toEndOf="@id/date_of_birth"
+                    app:layout_constraintTop_toTopOf="@id/height"
+                    app:layout_constraintWidth_percent="0.28">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/filled_exposed_dropdown_height"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextInputLayout"
+                        android:inputType="none"
+                        android:nextFocusForward="@id/weight"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/weight"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/weight"
+                    app:endIconMode="clear_text"
+                    app:helperTextEnabled="true"
+                    app:layout_constraintStart_toStartOf="@id/full_name"
+                    app:layout_constraintTop_toBottomOf="@id/height"
+                    app:layout_constraintWidth_percent="0.60"
+                    app:startIconDrawable="@drawable/ic_weight"
+                    app:startIconTint="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="@style/TextInputLayout"
+                        android:inputType="text"
+                        android:maxLength="26"
+                        android:maxLines="1"
+                        android:nextFocusRight="@+id/weight_dropdown" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/weight_dropdown"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/weight_metric"
+                    app:layout_constraintEnd_toEndOf="@id/date_of_birth"
+                    app:layout_constraintTop_toTopOf="@id/weight"
+                    app:layout_constraintWidth_percent="0.28">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/filled_exposed_dropdown_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextInputLayout"
+                        android:inputType="none"
+                        android:nextFocusForward="@id/blood_group"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/blood_group"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/blood_group"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/required_info"
+                    app:layout_constraintWidth_percent="0.9"
+                    app:startIconDrawable="@drawable/ic_blood_bag"
+                    app:startIconTint="@color/colorPrimary">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/filled_exposed_dropdown_blood_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:nextFocusForward="@id/organ_donor"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/organ_donor"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/organ_donor_status"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/blood_group"
+                    app:layout_constraintWidth_percent="0.9"
+                    app:startIconDrawable="@drawable/ic_donor"
+                    app:startIconTint="@color/colorPrimary">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/filled_exposed_dropdown_organ_donor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:nextFocusForward="@id/address"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/address"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="@string/address"
+                    app:endIconMode="clear_text"
+                    app:helperTextEnabled="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/organ_donor"
+                    app:layout_constraintWidth_percent="0.9"
+                    app:startIconDrawable="@drawable/ic_add_location"
+                    app:startIconTint="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:maxLength="26"
+                        android:maxLines="1"
+                        android:nextFocusForward="@+id/phone_number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phone_number"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/phone_number"
+                    app:endIconMode="clear_text"
+                    app:helperTextEnabled="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/address"
+                    app:layout_constraintWidth_percent="0.9"
+                    app:startIconDrawable="@drawable/ic_phone"
+                    app:startIconTint="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="phone"
+                        android:maxLength="26"
+                        android:maxLines="1"
+                        android:nextFocusForward="@+id/AddressField" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
